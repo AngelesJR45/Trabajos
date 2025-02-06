@@ -1,0 +1,62 @@
+/* Estilo para el título */
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las tarjetas de productos */
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Estilos para la tabla del pedido */
+.table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #D9534F;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    font-size: 1.2rem;
+}

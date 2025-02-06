@@ -1,0 +1,75 @@
+/* Estilo para el título curveado */
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px; /* Hace que se vea curveado */
+    display: block;
+    text-align: center; /* Centra el texto dentro del fondo */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el botón de cerrar sesión */
+.logout-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Estilos para las tarjetas */
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+}
+
+.card-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #75c1cb, #87e0c0);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5cd68f, #79dbbf);
+    transform: scale(1.05);
+}

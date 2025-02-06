@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <!-- Barra superior con Cerrar Sesión -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="title">Lista de Productos</h2>
+      <button class="btn btn-danger logout-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  
+    <!-- Lista de productos en formato de tarjetas -->
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let producto of productos">
+        <div class="card product-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <p class="card-text">Stock: {{ producto.stock }}</p>
+            <p class="card-price">${{ producto.precio | number:'1.2-2' }}</p>
+            <button class="btn btn-primary btn-block" (click)="agregarAlPedido(producto)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      
+      <button class="btn btn-primary  w-100 mt-3" data-bs-toggle="button" aria-pressed="true" (click)="irACrearPedido()">
+        Ver pedido
+      </button>
+      <button class="btn btn-success  w-100 mt-3" data-bs-toggle="button" aria-pressed="true" (click)="irAConsultarDetalle()">
+        Consultar detalle del pedido
+      </button>
+    </div>
+  </div>
+  

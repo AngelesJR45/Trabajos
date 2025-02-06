@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <!-- Barra superior con botones -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="btn btn-secondary" (click)="regresarTienda()">⬅ Regresar a la Tienda</button>
+    <h2 class="title">Consultar Pedidos</h2>
+    <button class="btn btn-danger logout-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+  </div>
+
+  <br>
+  <!-- Buscador con icono de lupa -->
+  <div class="input-group search-container mb-3">
+    <input type="text" class="form-control search-bar" [(ngModel)]="filtro" placeholder="Buscar pedido por ID">
+    <button class="btn btn-primary" (click)="buscarPedido()">Buscar</button>
+  </div>
+
+  <!-- Mostrar detalles del pedido -->
+  <div *ngIf="pedidoDetalle" class="accordion mt-4" id="pedidoDetalleAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pedidoDetalle">
+          Pedido #{{ pedidoDetalle.PedidoID }} - Fecha: {{ pedidoDetalle.FechaPedido }} - Estado: {{ pedidoDetalle.Estado }}
+        </button>
+      </h2>
+      <div id="pedidoDetalle" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <h4>Información del Cliente</h4>
+          <p><strong>Nombre:</strong> {{ pedidoDetalle.userinfo[0].NameUser }}</p>
+          <p><strong>Email:</strong> {{ pedidoDetalle.userinfo[0].email }}</p>
+
+          <h4>Productos</h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of pedidoDetalle.Infoproduct">
+                <td>{{ producto.NameProduct }}</td>
+                <td>${{ producto.price }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
